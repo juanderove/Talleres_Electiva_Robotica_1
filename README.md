@@ -4,4 +4,4 @@
 
 1. Wilmar Harley Quevedo Galindo (72347)
 2. Juan David Rodriguez Vera (121416)
-3. David Jualian Fonseca  
+3. David Jualian Fonseca (114759)
