@@ -1,23 +1,19 @@
-"""4. Realice un programa para el cálculo de la resistencia de una RTD de platino (PT100) en función de
-la temperatura."""
+import math
 
-# Cálculo de resistencia de una RTD PT100
-# ecuación IEC 60751
-
-# Constantes del sensor PT100
-R0 = 100  # Ohmios a 0°C
+# Constantes PT100 según IEC 60751
+R0 = 100
 A = 3.9083e-3
 B = -5.775e-7
+C = -4.183e-12
 
+# Temperatura
+T = 75   # Cambia aquí el valor
 
-# Temperatura previamente definida (°C)
-T = 75  #Grados que inluyo
+# Cálculo según rango
+if T >= 0:
+    R = R0 * (1 + A*T + B*(T**2))
+else:
+    R = R0 * (1 + A*T + B*(T**2) + C*(T-100)*(T**3))
 
-
-# Cálculo de la resistencia
-R = R0 * (1 + A*T + B*(T**2))
-
-
-# Resultado
 print("Temperatura:", T, "°C")
-print("Resistencia de la PT100:", round(R, 4), "Ohmios")
+print("Resistencia PT100:", round(R,4), "Ohmios")
