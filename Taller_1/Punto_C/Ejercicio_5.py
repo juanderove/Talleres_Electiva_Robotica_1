@@ -4,14 +4,14 @@ líneas rectas y/o curvas."""
 import matplotlib.pyplot as plt
 import numpy as np
 
-# --- FUNCIÓN DE APOYO PARA CURVAS ---
+# FUNCIÓN DE APOYO PARA CURVAS
 def arco(x_centro, y_centro, radio, angulo_inicio, angulo_fin, offset):
     theta = np.linspace(angulo_inicio, angulo_fin, 50)
     x = radio * np.cos(theta) + x_centro + offset
     y = radio * np.sin(theta) + y_centro
     return x, y
 
-# --- LETRAS COMPARTIDAS Y CORREGIDAS ---
+# LETRAS COMPARTIDAS Y CORREGIDAS
 def letra_I(offset, color="blue"): 
     plt.plot([0.5 + offset, 0.5 + offset], [0, 5], color=color, lw=3)
 
@@ -57,7 +57,7 @@ def letra_D(offset):
 def letra_V(offset):
     plt.plot([0+offset, 0.5+offset, 1+offset], [5, 0, 5], color="blue", lw=3)
 
-# --- DIBUJO PRINCIPAL ---
+# DIBUJO PRINCIPAL
 plt.figure(figsize=(16, 5))
 
 # JUAN
