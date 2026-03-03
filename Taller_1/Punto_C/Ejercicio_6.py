@@ -1,3 +1,6 @@
+"""6. Obtenga las coordenadas X y Y de los contornos de dos logos de automóviles (Chevrolet, Hyundai,
+Mazda, etc.), a través de Python."""
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
